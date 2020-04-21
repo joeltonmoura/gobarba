@@ -5,11 +5,13 @@ import router from './routes/index';
 
 import './database';
 
+const port = 3333;
+
 const app = express();
 
 app.use(express.json());
 app.use(router);
 
-app.listen(3333, () => {
-  console.log('Server started on port 3333');
+app.listen(port, () => {
+  console.log(`Server Started port ${port}`);
 });
